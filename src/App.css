@@ -7,8 +7,13 @@
     --second-yellow: #FFD900;
 
 }
-body {
+* {
+    box-sizing: border-box;
+}
+html, body {
     font-family: 'Roboto Condensed', sans-serif;
+    max-width: 100%;
+    overflow-x: hidden;
     /* background-color: var(--primary-black); */
 }
 /***********NAVBAR***********/
@@ -22,6 +27,7 @@ nav {
     background-color: var(--primary-black);
     z-index: 2;
 }
+
 .navbar-toggler .navbar-toggler-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(245, 221, 2)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
   }
@@ -94,8 +100,10 @@ nav {
     background-size: cover;
     background-position: center;
     height: 90vh;
-    opacity: 1;
+    opacity: 1
 }
+  
+
 
 .main-info {
     display: flex;
@@ -138,3 +146,85 @@ nav {
     }
 }
 /*****************HEADER END********************/
+
+
+/*****************HOMEBODY START********************/
+.container-fluid {
+    padding: 4rem;
+}
+
+.quote {
+    background-color:#000000;
+    color: white;
+    font-size: 2rem;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    -webkit-box-shadow: 0 0 3rem .5rem rgb(0, 0, 0);
+    -moz-box-shadow: 0 0 3rem .5rem rgb(0, 0, 0);
+    box-shadow: 0 0 3rem .5rem rgb(0, 0, 0);
+    margin: 2rem;
+}
+
+
+.quote p::before {
+    content: '\275D';
+    
+}
+
+.quote p::after {
+    content: '\275E';
+}
+
+.quote h6 {
+    font-size: 1.4rem;
+    position: relative;
+    top: 1rem;
+    right: 0;    
+}
+
+div.d-flex.inner-home {
+    margin-left: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@media (max-width: 850px) {
+    .home {
+        display: flex;
+        flex-direction: column;
+    }
+    div.d-flex.inner-home {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+
+@media (max-width: 500px) {
+    .quote {
+        font-size: 1.2rem;
+    }
+}
+
+/*****************HOMEBODY END********************/
+
+/*****************BACKTOTOP END********************/
+
+.backtotop {
+    background-color: #FFA011;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 3rem;
+    width: 3rem;
+    margin: 1rem;
+    padding: 1rem;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    z-index: 99;
+}
+
+/*****************BACKTOTOP END********************/
