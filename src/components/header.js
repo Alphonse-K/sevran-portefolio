@@ -1,4 +1,3 @@
-import React, {useState, useEffect} from 'react';
 import Typed from 'react-typed';
 
 const Header = () => {
